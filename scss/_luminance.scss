@@ -1,26 +1,33 @@
 // Luminance: Gets the relative luminance of $color.
 // Based on https://www.w3.org/TR/WCAG20/#relativeluminancedef
 
-@use "../sass" as *;
+@use "sass:color" as color;
+@use "sass:list" as list;
+@use "sass:math" as math;
 
-@function luminance($color)
-{
+@function luminance($color) {
 	// Break down color into rgb channels:
-	$rgb: COLOR-red($color), COLOR-green($color), COLOR-blue($color);
+	$rgb: color.red($color), color.green($color), color.blue($color);
 
 	// Loop through each color:
-	@for $i from 1 through 3
-	{
+	@for $i from 1 through 3 {
 		// Get and divide channel by 255:
-		$channel: MATH-div(LIST-nth($rgb, $i), 255);
+		$channel: math.div(list.nth($rgb, $i), 255);
 
 		// Perform calculations on channel:
-		$channel: if($channel < 0.03928, MATH-div($channel, 12.92), MATH-pow(MATH-div($channel + 0.055, 1.055), 2.4));
+		$channel: if($channel < 0.03928,
+			math.div($channel, 12.92),
+			math.pow(math.div($channel + 0.055, 1.055), 2.4)
+		);
 
 		// Replace channel in list:
-		$rgb: LIST-set-nth($rgb, $i, $channel);
+		$rgb: list.set-nth($rgb, $i, $channel);
 	}
 
 	// Calculate and return color luminance:
-	@return (0.2126 * LIST-nth($rgb, 1) + 0.7152 * LIST-nth($rgb, 2) + 0.0722 * LIST-nth($rgb, 3));
+	@return (
+		(0.2126 * list.nth($rgb, 1)) +
+		(0.7152 * list.nth($rgb, 2)) +
+		(0.0722 * list.nth($rgb, 3))
+	);
 }
