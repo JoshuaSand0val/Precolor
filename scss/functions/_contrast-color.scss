@@ -1,4 +1,4 @@
-// Contrast Color: Modifies high-contrast $color-list color to $target contrast vs $color2.
+// Contrast Color: Modifies high-contrast $color-list color to $target contrast vs $background.
 
 @use "sass:color" as color;
 @use "sass:math" as math;
