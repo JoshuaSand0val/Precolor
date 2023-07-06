@@ -1,4 +1,4 @@
-// High Contrast: Retrieves closest contrast-ratio $target color in $color-list compared to $background.
+// High Contrast: Retrieves closest $target contrast-ratio color in $color-list vs $background.
 
 @use "sass:list" as list;
 @use "contrast-ratio" as *;
