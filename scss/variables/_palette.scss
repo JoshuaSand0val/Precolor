@@ -1,0 +1,23 @@
+// Palette: Curated palette of colors suitable for theming.
+
+@use "colors" as *;
+
+$primary: $blue !default;
+$secondary: $gray !default;
+$success: $green !default;
+$danger: $red !default;
+$warning: $yellow !default;
+$info: $cyan !default;
+$light: $white !default;
+$dark: $black !default;
+
+$color-palette: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"success": $success,
+	"danger": $danger,
+	"warning": $warning,
+	"info": $info,
+	"light": $light,
+	"dark": $dark
+);
