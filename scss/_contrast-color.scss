@@ -19,12 +19,12 @@
 	$lighten: contrast-ratio($background, white) >= $target;
 
 	// While ratio is too low; lighten or darken color:
-	@while contrast-ratio($color, $background) < $ratio {
+	@while contrast-ratio($color, $background) < $target {
 		@if $lighten {
-			$color1: color.adjust($color, $lightness: +1%);
+			$color: color.adjust($color, $lightness: +1%);
 		}
 		@else {
-			$color1: color.adjust($color, $lightness: -1%);
+			$color: color.adjust($color, $lightness: -1%);
 		}
 	}
 
