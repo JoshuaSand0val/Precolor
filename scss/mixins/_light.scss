@@ -1,0 +1,7 @@
+// Light: A query for devices requesting light mode.
+
+@mixin light {
+	@media (prefers-color-scheme: light) {
+		@content;
+	}
+}

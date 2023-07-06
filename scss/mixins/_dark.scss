@@ -1,0 +1,7 @@
+// Dark: A query for devices requesting dark mode.
+
+@mixin dark {
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
+}
