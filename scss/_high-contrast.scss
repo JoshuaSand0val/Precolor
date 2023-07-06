@@ -1,0 +1,21 @@
+// High Contrast: Retrieves closest contrast-ratio $target color in $color-list compared to $background.
+
+@use "sass:list" as list;
+@use "contrast-ratio" as *;
+
+@function high-contrast($color-list, $background, $target: 21) {
+	$high-contrast: 0 null;
+	@each $color in $color-list {
+		$contrast: contrast-ratio($color, $background);
+		// Return $color if $contrast meets $target:
+		@if $contrast >= $target {
+			@return $color;
+		}
+		// Update $high-contrast if $contrast is greater:
+		@if $contrast > list.nth($high-contrast, 1) {
+			$high-contrast: $contrast $color;
+		}
+	}
+	// Return $high-contrast color:
+	@return list.nth($high-contrast, 2);
+}
