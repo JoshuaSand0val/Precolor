@@ -1,0 +1,33 @@
+// Contrast Color: Modifies high-contrast $color-list color to $target contrast vs $color2.
+
+@use "sass:color" as color;
+@use "sass:math" as math;
+@use "contrast-ratio" as *;
+@use "high-contrast" as *;
+
+@function contrast-color($color-list, $background, $target: 7) {
+	// Get highest contrasting $color out of $color-list:
+	$color: high-contrast($color-list, $background, $target);
+
+	// Limit $target ratio to maximum possible value:
+	$target: math.min($target, math.max(
+		contrast-ratio($background, white),
+		contrast-ratio($background, black)
+	));
+
+	// If lighter color on background meets requirements:
+	$lighten: contrast-ratio($background, white) >= $target;
+
+	// While ratio is too low; lighten or darken color:
+	@while contrast-ratio($color, $background) < $ratio {
+		@if $lighten {
+			$color1: color.adjust($color, $lightness: +1%);
+		}
+		@else {
+			$color1: color.adjust($color, $lightness: -1%);
+		}
+	}
+
+	// Return contrasting $color:
+	@return $color;
+}
