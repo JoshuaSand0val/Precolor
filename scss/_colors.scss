@@ -1,0 +1,47 @@
+// Colors: Palette of CSS named colors.
+
+$black: #18181C !default;
+$silver: #c9c8d6 !default;
+$gray: #727C83 !default;
+$white: #FBFBFB !default;
+$maroon: #b91c68 !default;
+$red: #EF6461 !default;
+$pink: #F47C98 !default;
+$purple: #b350ed !default;
+$indigo: #9892C8 !default;
+$fuchsia: #df11af !default;
+$green: #74bf80 !default;
+$lime: #00ff6e !default;
+$olive: #389269 !default;
+$yellow: #FFCB47 !default;
+$orange: #EE8434 !default;
+$brown: #BB946C !default;
+$navy: #00305f !default;
+$blue: #5490b8 !default;
+$teal: #2a9186 !default;
+$cyan: #6bcee7 !default;
+$aqua: $cyan !default;
+
+$colors: (
+	"black": $black,
+	"silver": $silver,
+	"gray": $gray,
+	"white": $white,
+	"maroon": $maroon,
+	"red": $red,
+	"pink": $pink,
+	"purple": $purple,
+	"indigo": $indigo,
+	"fuchsia": $fuchsia,
+	"green": $green,
+	"lime": $lime,
+	"olive": $olive,
+	"yellow": $yellow,
+	"orange": $orange,
+	"brown": $brown,
+	"navy": $navy,
+	"blue": $blue,
+	"teal": $teal,
+	"cyan": $cyan,
+	"aqua": $aqua
+);
