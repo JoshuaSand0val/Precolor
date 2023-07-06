@@ -1,0 +1,10 @@
+// Color Schemes: Builds scheme queries using $light and $dark values.
+
+@use "../variables/" as *;
+
+@mixin color-schemes($light: $light, $dark: $dark) {
+	@content($light);
+	@media (prefers-color-scheme: dark) {
+		@content($dark);
+	}
+}
