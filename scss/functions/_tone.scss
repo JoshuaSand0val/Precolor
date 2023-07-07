@@ -1,0 +1,11 @@
+// Tone: Grays $color by $amount (percentage or weight).
+
+@use "sass:color" as color;
+@use "sass:math" as math;
+
+@function tone($color, $amount) {
+	@if math.is-unitless($amount) {
+		$amount: math.clamp(-100%, math.div($amount + 0%, 10), 100%);
+	}
+	@return color.mix(#808080, $color, $weight: $amount);
+}
