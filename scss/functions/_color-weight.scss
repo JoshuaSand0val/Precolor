@@ -1,0 +1,9 @@
+// Color Weight: Changes $color lightness by $weight from 0 to 1000 (white to black).
+
+@use "sass:color" as color;
+@use "sass:math" as math;
+
+@function color-weight($color, $weight) {
+	$weight: math.clamp(0%, 100% - math.div($weight, 10), 100%);
+	@return color.change($color, $lightness: $weight);
+}
