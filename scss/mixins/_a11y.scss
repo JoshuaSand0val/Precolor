@@ -2,7 +2,7 @@
 
 @use "../functions/" as *;
 
-@mixin a11y($default, $more, $less: null, $custom: null) {
+@mixin a11y($default: aa, $more: aaa, $less: null, $custom: null) {
 	// Include $default value:
 	@content(a11y($default));
 	// Create $preferences list from $more, $less and $custom:
