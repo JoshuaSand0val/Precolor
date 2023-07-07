@@ -2,3 +2,23 @@
 @forward "variables/";
 @forward "functions/";
 @forward "mixins/";
+@forward "sass:color" show
+	alpha,
+	blackness,
+	blue,
+	grayscale,
+	green,
+	hue,
+	hwb,
+	invert,
+	lightness,
+	red,
+	saturate,
+	saturation,
+	whiteness;
+@forward "sass:color" as color-* show
+	color-adjust,
+	color-change,
+	color-complement,
+	color-mix,
+	color-scale;
