@@ -1,0 +1,12 @@
+// Color Shift: Darkens or lightens $color by $amount (percentage or weight) based on luminance.
+
+@use "is-light" as *;
+@use "shade" as *;
+@use "tint" as *;
+
+@function color-shift($color, $amount) {
+	@if is-light($color) {
+		@return shade($color, $amount);
+	}
+	@return tint($color, $amount);
+}
