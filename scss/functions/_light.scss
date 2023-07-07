@@ -1,0 +1,17 @@
+// Light: Returns $color-list color that is the lightest.
+
+@use "sass:list" as list;
+@use "sass:math" as math;
+@use "luminance" as *;
+
+@function light($color-list...) {
+	// Create list of $luminance values:
+	$luminance: ();
+	@each $color in $color-list {
+		$luminance: list.append($luminance, luminance($color));
+	}
+	// Get $index of highest luminance color:
+	$index: list.index($luminance, math.max($luminance...));
+	// Return lightest color:
+	@return list.nth($color-list, $index);
+}

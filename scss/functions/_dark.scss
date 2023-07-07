@@ -1,0 +1,17 @@
+// Dark: Returns $color-list color that is the darkest.
+
+@use "sass:list" as list;
+@use "sass:math" as math;
+@use "luminance" as *;
+
+@function dark($color-list...) {
+	// Create list of $luminance values:
+	$luminance: ();
+	@each $color in $color-list {
+		$luminance: list.append($luminance, luminance($color));
+	}
+	// Get $index of lowest luminance color:
+	$index: list.index($luminance, math.min($luminance...));
+	// Return darkest color:
+	@return list.nth($color-list, $index);
+}
