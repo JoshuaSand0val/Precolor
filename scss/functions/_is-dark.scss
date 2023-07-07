@@ -1,0 +1,10 @@
+// Is Dark: Returns boolean on whether color is dark or not.
+
+@use "luminance" as *;
+
+@function is-dark($color) {
+	@if luminance($color) <= 0.5 {
+		@return true;
+	}
+	@return false;
+}
