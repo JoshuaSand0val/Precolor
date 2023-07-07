@@ -1,21 +1,21 @@
-// A11y (Accessibility): Returns contrast-ratio associated with accessibility $keyword.
+// A11y (Accessibility): Returns contrast-ratio associated with accessibility $keywords.
 
 @use "sass:map" as map;
 @use "sass:meta" as meta;
 @use "sass:string" as string;
 
-@function a11y($keyword) {
-	// Return contrast if $keyword is number:
-	@if meta.type-of($keyword) == number {
-		@return $keyword;
+@function a11y($keywords) {
+	// Return contrast if $keywords is number:
+	@if meta.type-of($keywords) == number {
+		@return $keywords;
 	}
-	// Return $keyword contrast value: 
-	$keyword: string.to-lower-case(#{$keyword});
+	// Return $keywords contrast value: 
+	$keywords: string.to-lower-case(#{$keywords});
 	@return map.get((
 		"aa": 4.5,
 		"aa large": 3,
 		"aa ui": 3,
 		"aaa": 7,
 		"aaa large": 4.5
-	), $keyword) or 1;
+	), $keywords) or 7;
 }
