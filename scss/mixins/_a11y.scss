@@ -1,0 +1,18 @@
+// A11y (Accessibility): Builds contrast queries using $default, $more, $less and $custom preferences.
+
+@use "../functions/" as *;
+
+@mixin a11y($default, $more, $less: null, $custom: null) {
+	// Include $default value:
+	@content(a11y($default));
+	// Create $preferences list from $more, $less and $custom:
+	$preferences: more $more, less $less, custom $custom;
+	// Include $value for each $mode in $preferences:
+	@each $mode, $value in $preferences {
+		@if $value != null {
+			@media (prefers-contrast: $mode) {
+				@content(a11y($value));
+			}
+		}
+	}
+}
