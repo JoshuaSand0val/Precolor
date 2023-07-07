@@ -1,0 +1,7 @@
+// Tint: Lightens $color by $amount (percentage or weight).
+
+@use "shade" as *;
+
+@function tint($color, $amount) {
+	@return shade($color, -$amount);
+}
