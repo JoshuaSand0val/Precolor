@@ -1,10 +1,10 @@
-// Contrast: Builds contrast queries using $default, $more, $less and $custom preferences.
+// Contrast: Builds contrast queries using $no-preference and $more, $less and $custom preferences.
 
 @use "../functions/" as *;
 
-@mixin contrast($default: aa, $more: aaa, $less: null, $custom: null) {
-	// Include $default value:
-	@content(a11y($default));
+@mixin contrast($no-preference: aa, $more: aaa, $less: null, $custom: null) {
+	// Include $no-preference value:
+	@content(a11y($no-preference));
 	// Create $preferences list from $more, $less and $custom:
 	$preferences: more $more, less $less, custom $custom;
 	// Include $value for each $mode in $preferences:
