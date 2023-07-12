@@ -75,7 +75,7 @@ In the example above: `color` is the namespace of the module. Members of the mod
 
 *You can omit the namespace using `*` (wildcard).*
 
-## Color Accessibility
+## Color Contrast
 
 Ensuring color is intelligible is crucial to designing a website anyone can use. If nobody can see your website, it is difficult for everyone to stay on your website.
 
@@ -115,4 +115,28 @@ high-contrast($color-list, $background, $target: 21);
 ```scss
 // Outputs the color blue:
 @debug high-contrast(red green blue, white);
+```
+
+### A11y (Accessibility)
+
+Function `a11y` returns a contrast-ratio value associated with accessibility `$keywords`.
+
+```scss
+a11y($keywords);
+```
+
+**Usage & Parameters:**
+
+1. `$keywords` - An unquoted string of accessibility keywords.  
+Defaults to `7`. Can accept a number.
+
+```scss
+// Outputs the number 4.5:
+@debug a11y(aa);
+@debug a11y(aaa large);
+// Outputs the number 3:
+@debug a11y(aa large);
+@debug a11y(aa ui);
+// Outputs the number 7:
+@debug a11y(aaa);
 ```
