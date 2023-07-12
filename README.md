@@ -75,3 +75,33 @@ In the example above: `color` is the namespace of the module. Members of the mod
 
 *You can omit the namespace using `*` (wildcard).*
 
+## Basic Usage
+
+### Color Accessibility
+
+Ensuring color is intelligible is crucial to designing a website anyone can use. If nobody can see your website, it is difficult for everyone to stay on your website.
+
+#### Contrast Color
+
+Function `contrast-color` is the best way to ensure a color's contrast on a background is accessible.
+
+**Usage & Parameters:**
+
+1. `$color-list` - The desired color, or color set to be compared.
+2. `$background` - Color to compare contrast against.
+3. `$target` - The contrast-ratio value to be met.
+
+```scss
+contrast-color($color-list, $background, $target: 7);
+```
+
+**How Output is Determined:**
+
+1. Parameter `$color-list` is narrowed down to the **first** value that is closest **not greatest** to the `$target` contrast-ratio compared to `$background`.
+2. The `$color-list` color is compared to `$background` and tinted to meet the `$target` contrast-ratio. Otherwise, it is shaded.
+
+
+```scss
+// Outputs the color green:
+@debug contrast-color(red green blue, white, 4.5);
+```
