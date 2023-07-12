@@ -164,3 +164,9 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 	@debug $ratio;
 }
 ```
+
+## Acknowledgment
+Precolor was built by Joshua Elijah Sandoval.
+
+## License
+Precolor is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
