@@ -140,3 +140,27 @@ Defaults to `7`. Can accept a number.
 // Outputs the number 7:
 @debug a11y(aaa);
 ```
+
+### Contrast (Mixin)
+
+Mixin `contrast` builds `prefers-contrast` media queries using differing preferences.
+
+```scss
+@include contrast($no-preference: aa, $more: aaa, $less: null, $custom: null)
+```
+
+**Usage & Parameters:**
+
+Each parameter represents an `a11y` function value for the `prefers-contrast` media query:
+
+1. `$no-preference` - The default value.
+2. `$more` - High contrast value.
+3. `$less` - Less contrast value.
+4. `$custom` - None of the above. The client has requested a custom palette by users of `forced-colors: active`.
+
+```scss
+// Outputs numbers 4.5 and 7 for their respective queries:
+@include contrast using ($ratio) {
+	@debug $ratio;
+}
+```
