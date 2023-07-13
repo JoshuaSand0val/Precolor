@@ -81,7 +81,7 @@ Ensuring color is intelligible is crucial to designing a website anyone can use.
 
 ### Contrast Color
 
-Function `contrast-color` filters a `$color-list` using the `high-contrast` function and modifies it to meet the `$target` contrast-ratio compared to `$background`.
+Function `contrast-color` filters a `$color-list` using the `high-contrast` function and defaults to tint the color to meet the `$target` contrast-ratio compared to `$background`.
 
 ```scss
 contrast-color($color-list, $background, $target: 7);
@@ -159,7 +159,7 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 4. `$custom` - None of the above. The client has requested a custom palette by users of `forced-colors: active`.
 
 ```scss
-// Outputs numbers 4.5 and 7 for their respective queries:
+// Outputs 4.5 (no-preference) and (more) 7 contrast-ratios:
 @include contrast using ($ratio) {
 	@debug $ratio;
 }
