@@ -101,6 +101,26 @@ Each parameter represents a value for the `prefers-color-scheme` media query:
 }
 ```
 
+### Light (Mixin)
+
+Mixin `light` builds a `prefers-color-scheme` media query for users requesting light mode.
+
+```scss
+@include light {
+	...
+}
+```
+
+### Dark (Mixin)
+
+Mixin `dark` builds a `prefers-color-scheme` media query for users requesting dark mode.
+
+```scss
+@include dark {
+	...
+}
+```
+
 ## Color Contrast
 
 Ensuring color is intelligible is crucial to designing a website anyone can use. If nobody can see your website, it is difficult for everyone to stay on your website.
