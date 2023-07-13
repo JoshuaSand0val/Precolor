@@ -1,4 +1,4 @@
-# Powerful preprocessor tools for a accessible color palette.
+# Powerful preprocessor tools for an accessible color palette.
 
 **Add it to your project now via installation by NPM:**
 
