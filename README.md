@@ -79,25 +79,6 @@ In the example above: `color` is the namespace of the module. Members of the mod
 
 Ensuring color is intelligible is crucial to designing a website anyone can use. If nobody can see your website, it is difficult for everyone to stay on your website.
 
-### Contrast Color
-
-Function `contrast-color` filters a `$color-list` using the `high-contrast` function and defaults to tint the color to meet the `$target` contrast-ratio compared to `$background`.
-
-```scss
-contrast-color($color-list, $background, $target: 7);
-```
-
-**Usage & Parameters:**
-
-1. `$color-list` - The color set to be compared.
-2. `$background` - The color to compare contrast against.
-3. `$target` - The contrast-ratio value to be met.
-
-```scss
-// Outputs the color green:
-@debug contrast-color(red green blue, white, 4.5);
-```
-
 ### High Contrast
 
 Function `high-contrast` narrows down a `$color-list` to the **first** color that is **closest** to the `$target` contrast-ratio compared to `$background`.
@@ -115,6 +96,25 @@ high-contrast($color-list, $background, $target: 21);
 ```scss
 // Outputs the color blue:
 @debug high-contrast(red green blue, white);
+```
+
+### Contrast Color
+
+Function `contrast-color` filters a `$color-list` using the `high-contrast` function and defaults to tint the color to meet the `$target` contrast-ratio compared to `$background`.
+
+```scss
+contrast-color($color-list, $background, $target: 7);
+```
+
+**Usage & Parameters:**
+
+1. `$color-list` - The color set to be compared.
+2. `$background` - The color to compare contrast against.
+3. `$target` - The contrast-ratio value to be met.
+
+```scss
+// Outputs the color green:
+@debug contrast-color(red green blue, white, 4.5);
 ```
 
 ### A11y (Accessibility)
