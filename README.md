@@ -75,6 +75,34 @@ In the example above: `color` is the namespace of the module. Members of the mod
 
 *You can omit the namespace using `*` (wildcard).*
 
+## Default Colors
+
+Having a consistent color palette is critical to visual design. Precolor provides defaults based on CSS named colors, as well as a more deliberate and concise palette.
+
+| Color Palette | Description | RGB Hex Value | CSS Named Color |
+| ------------- | ----------- | ------------- | --------------- |
+| `$primary` | The most frequent color used. It represents primary user-interface elements. | `#5490b8` | `$blue` |
+| `$secondary` | Optional secondary color used to accent user-interface elements. | `#727C83` | `$gray` |
+| `$success` | Represents when a user action has been successful. | `#74bf80` | `$green` |
+| `$danger`	| Represents a critical action or failure. | `#EF6461` | `$red` |
+| `$warning` | Represents a potentially dangerous user action. | `#FFCB47` | `$yellow` |
+| `$info` | Represents information to the user. | `#6bcee7` | `$cyan` |
+| `$light` | The primary light color. Commonly used for backgrounds. | `#FBFBFB` | `$white` |
+| `$dark` | The primary dark color. Commonly used for backgrounds. | `#18181C` | `$black` |
+||| `#c9c8d6` | `$silver` |
+||| `#b91c68` | `$maroon` |
+||| `#F47C98` | `$pink` |
+||| `#b350ed` | `$purple` |
+||| `#9892C8` | `$indigo` |
+||| `#df11af` | `$fuchsia` |
+||| `#00ff6e` | `$lime` |
+||| `#389269` | `$olive` |
+||| `#EE8434` | `$orange` |
+||| `#BB946C` | `$brown` |
+||| `#00305f` | `$navy` |
+||| `#2a9186` | `$teal` |
+||| `$cyan` | `$aqua` |
+
 ## Color Schemes
 
 Differing color schemes can improve your website's visibility during certain times of the day. It is a great quality of life feature!
