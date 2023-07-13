@@ -77,7 +77,7 @@ In the example above: `color` is the namespace of the module. Members of the mod
 
 ## Default Colors
 
-Having a consistent color palette is critical to visual design. Precolor provides defaults based on CSS named colors, as well as a more deliberate and concise palette.
+Having a consistent color palette is critical to visual design. Precolor provides defaults based on CSS named colors, as well as a more deliberate and concise palette. These colors are also mapped. Named `$colors` and `$color-palette` respectively.
 
 | Color Palette | Description | RGB Hex Value | CSS Named Color |
 | ------------- | ----------- | ------------- | --------------- |
