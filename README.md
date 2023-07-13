@@ -117,6 +117,25 @@ contrast-color($color-list, $background, $target: 7);
 @debug contrast-color(red green blue, white, 4.5);
 ```
 
+### Contrast Ratio
+
+Function `contrast-ratio` gets the contrast-ratio between two colors.
+
+```scss
+contrast-ratio($color1, $color2);
+```
+
+**Usage & Parameters:**
+
+1. `$color1` - First color value.
+2. `$color2` - Second color value.
+
+
+```scss
+// Outputs the number 21:
+@debug contrast-ratio(white, black);
+```
+
 ### A11y (Accessibility)
 
 Function `a11y` returns a contrast-ratio value associated with accessibility `$keywords`.
