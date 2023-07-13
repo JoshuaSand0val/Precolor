@@ -75,6 +75,32 @@ In the example above: `color` is the namespace of the module. Members of the mod
 
 *You can omit the namespace using `*` (wildcard).*
 
+## Color Schemes
+
+Differing color schemes can improve your website's visibility during certain times of the day. It is a great quality of life feature!
+
+### Color Schemes (Mixin)
+
+Mixin `color-schemes` builds `prefers-color-scheme` media queries using differing colors.
+
+```scss
+@include color-schemes($light: $light, $dark: $dark)
+```
+
+**Usage & Parameters:**
+
+Each parameter represents a value for the `prefers-color-scheme` media query:
+
+1. `$light` - The light (default) color.
+2. `$dark` - The dark color.
+
+```scss
+// Outputs color $light and $dark:
+@include color-schemes using ($color) {
+	@debug $color;
+}
+```
+
 ## Color Contrast
 
 Ensuring color is intelligible is crucial to designing a website anyone can use. If nobody can see your website, it is difficult for everyone to stay on your website.
@@ -178,7 +204,7 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 4. `$custom` - None of the above. The client has requested a custom palette by users of `forced-colors: active`.
 
 ```scss
-// Outputs 4.5 (no-preference) and (more) 7 contrast-ratios:
+// Outputs contrast-ratios 4.5 (no-preference) and 7 (more):
 @include contrast using ($ratio) {
 	@debug $ratio;
 }
