@@ -258,6 +258,31 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 }
 ```
 
+## Sass Color Module
+
+The Sass language itself has many color functions of its own. These are aptly forwarded in Precolor.  
+https://sass-lang.com/documentation/modules/color/
+
+| Module Function | Description | Snippet | Output |
+| --------------- | ----------- | ------- | ------ |
+| alpha | Retrieves alpha channel of color as a number from `0` to `1`. | `alpha(rgba(0, 0, 0, 0.5))` | `0.5` |
+| blackness | Retrieves color HWB blackness as a percentage from `0%` to `100%`. | `blackness(#000)` | `100%` |
+| blue | Retrieves blue channel of color as a number from `0` to `255`. | `blue(#0000FF)` | `255` |
+| grayscale | Removes saturation from color. | `grayscale(orange)` | `gray` |
+| green | Retrieves green channel of color as a number from `0` to `255`. | `green(#00FF00)` | `255` |
+| hue | Retrieves color hue value between `0deg` and `360deg`. | `hue(yellow)` | `60deg` |
+| hwb | Creates color from hue, whiteness and blackness. Optionally alpha transparency. | `hwb(180deg, 0%, 50%)` | `teal` |
+| invert | Modifies color and outputs its negative. | `invert(white, 100%)` | `black` |
+| lightness | Retrieves color HSL lightness as a percentage from `0%` to `100%`. | `lightness(purple)` | `25%` |
+| red | Retrieves red channel of color as a number from `0` to `255`. | `red(#FF0000)` | `255` |
+| saturation | Retrieves color HSL saturation as a percentage from `0%` to `100%`. | `saturation(brown)` | `60%` |
+| whiteness | Retrieves color HWB whiteness as a percentage from `0%` to `100%`. | `whiteness(#FFF)` | `100%` |
+| color-adjust | ... | ... | ... |
+| color-change | ... | ... | ... |
+| color-complement | ... | ... | ... |
+| color-mix | ... | ... | ... |
+| color-scale | ... | ... | ... |
+
 ## Acknowledgment
 Precolor was built by Joshua Elijah Sandoval.
 
