@@ -298,6 +298,26 @@ tone($color, $amount);
 @debug tone(white, 100%);
 ```
 
+### Is Light or Dark
+
+Functions `is-light` and `is-dark` return a boolean (**true** or **false**) on whether a color's **relative luminance** is light or dark respectively.
+
+```scss
+is-light($color);
+is-dark($color);
+```
+
+**Usage & Parameters:**
+
+1. `$color` - The color to measure luminance of.
+
+```scss
+// Outputs false:
+@debug is-light(green);
+// Outputs true:
+@debug is-dark(blue);
+```
+
 ## Sass Color Module
 
 The Sass language itself has many color functions of its own. These are aptly forwarded in Precolor.  
