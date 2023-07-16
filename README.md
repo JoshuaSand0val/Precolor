@@ -277,6 +277,8 @@ luminance($color);
 
 Functions `shade`, `tint` and `tone` modify the HSL lightness attribute of a `$color` by a given `$amount`.
 
+Shade darkens, tint lightens, and tone brings the color closer to gray.
+
 ```scss
 shade($color, $amount);
 tint($color, $amount);
