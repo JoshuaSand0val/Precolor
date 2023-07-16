@@ -129,21 +129,15 @@ Each parameter represents a value for the `prefers-color-scheme` media query:
 }
 ```
 
-### Light (Mixin)
+### Light and Dark (Mixins)
 
-Mixin `light` builds a `prefers-color-scheme` media query for users requesting light mode.
+Mixins `light` and `dark` build a `prefers-color-scheme` media query for users requesting light or dark mode respectively.
 
 ```scss
 @include light {
 	...
 }
-```
 
-### Dark (Mixin)
-
-Mixin `dark` builds a `prefers-color-scheme` media query for users requesting dark mode.
-
-```scss
 @include dark {
 	...
 }
@@ -279,7 +273,7 @@ luminance($color);
 @debug luminance(white);
 ```
 
-### Shade & Tint and Tone
+### Shade and Tint and Tone
 
 Functions `shade`, `tint` and `tone` modify the HSL lightness attribute of a `$color` by a given `$amount`.
 
