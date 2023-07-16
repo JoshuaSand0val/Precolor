@@ -298,6 +298,26 @@ luminance($color);
 @debug luminance(white);
 ```
 
+### Light and Dark (Functions)
+
+Functions `light` and `dark` narrow down a `$color-list` to the color that is **lightest** or **darkest** respectively.
+
+```scss
+light($color-list...);
+dark($color-list...);
+```
+
+**Usage & Parameters:**
+
+1. `$color-list` - Color set to compare luminance of.
+
+```scss
+// Outputs red:
+@debug light(red, green, blue);
+// Outputs blue:
+@debug dark(red, green, blue);
+```
+
 ### Is Light or Dark
 
 Functions `is-light` and `is-dark` return a boolean (**true** or **false**) on whether a color's **relative luminance** is light or dark respectively.
