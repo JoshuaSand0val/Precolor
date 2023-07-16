@@ -266,7 +266,7 @@ https://sass-lang.com/documentation/modules/color/
 | Module Function | Description | Snippet | Output |
 | --------------- | ----------- | ------- | ------ |
 | alpha | Retrieves alpha channel of color as a number from `0` to `1`. | `alpha(rgba(0, 0, 0, 0.5))` | `0.5` |
-| blackness | Retrieves color HWB blackness as a percentage from `0%` to `100%`. | `blackness(#000)` | `100%` |
+| blackness | Retrieves color HWB blackness as a percentage from `0%` to `100%`. | `blackness(black)` | `100%` |
 | blue | Retrieves blue channel of color as a number from `0` to `255`. | `blue(#0000FF)` | `255` |
 | grayscale | Removes saturation from color. | `grayscale(orange)` | `gray` |
 | green | Retrieves green channel of color as a number from `0` to `255`. | `green(#00FF00)` | `255` |
@@ -276,12 +276,12 @@ https://sass-lang.com/documentation/modules/color/
 | lightness | Retrieves color HSL lightness as a percentage from `0%` to `100%`. | `lightness(purple)` | `25%` |
 | red | Retrieves red channel of color as a number from `0` to `255`. | `red(#FF0000)` | `255` |
 | saturation | Retrieves color HSL saturation as a percentage from `0%` to `100%`. | `saturation(brown)` | `60%` |
-| whiteness | Retrieves color HWB whiteness as a percentage from `0%` to `100%`. | `whiteness(#FFF)` | `100%` |
-| color-adjust | ... | ... | ... |
-| color-change | ... | ... | ... |
-| color-complement | ... | ... | ... |
-| color-mix | ... | ... | ... |
-| color-scale | ... | ... | ... |
+| whiteness | Retrieves color HWB whiteness as a percentage from `0%` to `100%`. | `whiteness(white)` | `100%` |
+| color-adjust | Modifies color properties by fixed amounts. [Learn More.](https://sass-lang.com/documentation/modules/color/#adjust) | `color-adjust(lime, $blackness: 50%)` | `green` |
+| color-change | Modifies color properties by changing them to new values. [Learn More.](https://sass-lang.com/documentation/modules/color/#change) | `color-change(yellow, $green: 0)` | `red` |
+| color-complement | Retrieves color RGB complement by rotating hue by `180deg`. | `color-complement(blue)` | `yellow` |
+| color-mix | Retrieves color by mixing two colors together by percentage. [Learn More.](https://sass-lang.com/documentation/modules/color/#mix) | `color-mix(lime, blue, 50%)` | `teal` |
+| color-scale | Modifies color properties by fluidly scaling them. [Learn More.](https://sass-lang.com/documentation/modules/color/#scale) | `color-scale(green, $green: 100%)` | `lime` |
 
 ## Acknowledgment
 Precolor was built by Joshua Elijah Sandoval.
