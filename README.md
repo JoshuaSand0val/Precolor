@@ -256,23 +256,6 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 
 Differing levels of color luminance can portray depth and interactivity in a design. Presenting a clear visual hierarchy and signaling to the user that the application is responding to their inputs.
 
-### Luminance
-
-Function `luminance` calculates the **relative** luminance of a given `$color` from `0` to `1`.
-
-```scss
-luminance($color);
-```
-
-**Usage & Parameters:**
-
-1. `$color` - The color to calculate against.
-
-```scss
-// Outputs the number 1:
-@debug luminance(white);
-```
-
 ### Shade and Tint and Tone
 
 Functions `shade`, `tint` and `tone` modify the HSL lightness attribute of a `$color` by a given `$amount`.
@@ -296,6 +279,23 @@ tone($color, $amount);
 @debug tint(gray, 500);
 // Outputs the color gray:
 @debug tone(white, 100%);
+```
+
+### Luminance
+
+Function `luminance` calculates the **relative** luminance of a given `$color` from `0` to `1`.
+
+```scss
+luminance($color);
+```
+
+**Usage & Parameters:**
+
+1. `$color` - The color to calculate against.
+
+```scss
+// Outputs the number 1:
+@debug luminance(white);
 ```
 
 ### Is Light or Dark
