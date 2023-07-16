@@ -193,7 +193,7 @@ contrast-color($color-list, $background, $target: 7);
 
 ### Contrast Ratio
 
-Function `contrast-ratio` gets the contrast-ratio between two colors.
+Function `contrast-ratio` gets the contrast-ratio between two colors as a number from `1` to `21`.
 
 ```scss
 contrast-ratio($color1, $color2);
