@@ -279,6 +279,29 @@ luminance($color);
 @debug luminance(white);
 ```
 
+### Shade & Tint and Tone
+
+Functions `shade`, `tint` and `tone` modify the HSL lightness attribute of a `$color` by a given `$amount`.
+
+```scss
+shade($color, $amount);
+tint($color, $amount);
+tone($color, $amount);
+```
+
+**Usage & Parameters:**
+
+1. `$color` - The color to modify lightness of.
+2. `$amount` - A percentage or weight (number range of `0` to `1000`).
+
+```scss
+// Outputs the color white:
+@debug shade(gray, -50%);
+@debug tint(gray, 500);
+// Outputs the color gray:
+@debug tone(white, 100%);
+```
+
 ## Sass Color Module
 
 The Sass language itself has many color functions of its own. These are aptly forwarded in Precolor.  
