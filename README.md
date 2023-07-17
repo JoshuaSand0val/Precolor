@@ -297,6 +297,25 @@ tone($color, $amount);
 @debug tone(white, 100%);
 ```
 
+### Color Shift
+
+Function `color-shift` modifies `$color` by a given `$amount` alternating between `shade` and `tint` functions based on its existing **relative luminance**.
+
+```scss
+color-shift($color, $amount);
+```
+
+**Usage & Parameters:**
+
+1. `$color` - The color to modify.
+2. `$amount` - A percentage (ranging from `0%` to `100%`).
+
+```scss
+// Outputs the color gray:
+@debug color-shift(white, 50%);
+@debug color-shift(black, 50%);
+```
+
 ### Light and Dark (Functions)
 
 Functions `light` and `dark` narrow down a `$color-list` to the color whose **relative luminance** is **lightest** or **darkest** respectively.
