@@ -316,6 +316,24 @@ color-shift($color, $amount);
 @debug color-shift(black, 50%);
 ```
 
+### Color Weight
+
+Function `color-weight` changes the HSL lightness attribute of `$color` by a given `$weight`.
+
+```scss
+color-weight($color, $weight);
+```
+
+**Usage & Parameters:**
+
+1. `$color` - The color to modify.
+2. `$weight` - Integer ranging from `0` to `1000` representing `white` to `black`.
+
+```scss
+// Outputs the color gray:
+@debug color-weight(white, 500);
+```
+
 ### Light and Dark (Functions)
 
 Functions `light` and `dark` narrow down a `$color-list` to the color whose **relative luminance** is **lightest** or **darkest** respectively.
