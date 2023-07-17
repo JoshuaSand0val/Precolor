@@ -257,9 +257,8 @@ Differing levels of color luminance can portray depth and interactivity in a des
 
 ### Shade or Tint and Tone
 
-Functions `shade`, `tint` and `tone` modify the HSL lightness attribute of a `$color` by a given `$amount`.
-
-Shade darkens, tint lightens, and tone brings the color closer to gray.
+Functions `shade`, `tint` and `tone` modify an attribute of a `$color` by a given `$amount`.  
+Shade mixes in `black`, tint mixes in `white`, and tone mixes in `gray`.
 
 ```scss
 shade($color, $amount);
@@ -269,13 +268,14 @@ tone($color, $amount);
 
 **Usage & Parameters:**
 
-1. `$color` - The color to modify lightness of.
-2. `$amount` - A percentage or weight (number range of `0` to `1000`).
+1. `$color` - The color to modify.
+2. `$amount` - A percentage (ranging from `0%` to `100%`).
 
 ```scss
-// Outputs the color white:
-@debug shade(gray, -50%);
-@debug tint(gray, 500);
+// Outputs the color teal:
+@debug shade(cyan, 50%);
+// Outputs the color silver:
+@debug tint(gray, 50%);
 // Outputs the color gray:
 @debug tone(white, 100%);
 ```
