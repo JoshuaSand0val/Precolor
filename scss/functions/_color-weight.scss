@@ -4,6 +4,9 @@
 @use "sass:math" as math;
 
 @function color-weight($color, $weight) {
+	@if math.is-unitless($weight) == false {
+		@error "Parameter $weight must be a unitless value ranging from 0 to 1000.";
+	}
 	$weight: math.clamp(0%, 100% - math.div($weight, 10), 100%);
 	@return color.change($color, $lightness: $weight);
 }
