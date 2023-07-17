@@ -1,4 +1,4 @@
-// Color Shift: Darkens or lightens $color by $amount (percentage or weight) based on luminance.
+// Color Shift: Shades or tints $color by $amount (percentage) based on luminance.
 
 @use "is-light" as *;
 @use "shade" as *;
