@@ -1,0 +1,31 @@
+{
+	"name": "precolor",
+	"version": "1.0.0",
+	"description": "A collection of color manipulation tools written in Sass (SCSS).",
+	"keywords": [
+		"Precolor",
+		"CSS color",
+		"CSS",
+		"SCSS",
+		"Sass"
+	],
+	"homepage": "https://github.com/JoshuaSand0val/Precolor#readme",
+	"license": "MIT",
+	"author": "Joshua Elijah Sandoval",
+	"files": [
+		"scss",
+		"_index.scss",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	],
+	"main": "scss/_index.scss",
+	"style": "scss/_index.scss",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/JoshuaSand0val/Precolor.git"
+	},
+	"dependencies": {
+		"sass": "^1.63.6"
+	}
+}
