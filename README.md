@@ -9,7 +9,7 @@ npm install precolor --save-dev
 ---
 
 ## What is Precolor?
-Precolor is a collection of CSS color manipulation tools written in SASS/SCSS. Purposely designed to reduce CSS color complexity and increase accessibility on the web.
+Precolor is a collection of CSS color manipulation tools written in Sass (SCSS). Purposely designed to reduce CSS color complexity and increase accessibility on the web.
 
 ## Prerequisite Installation
 
@@ -52,7 +52,7 @@ Import the package with the Sass `@forward` rule in a new file named `_precolor.
 @forward "node_modules/precolor/";
 ```
 
-In addition to being a accessible entry point: `@forward` allows for the configuration of a module's `!default` variables.
+In addition to being an accessible entry point: `@forward` allows for the configuration of a module's `!default` variables.
 
 ```scss
 @forward "node_modules/precolor/" with (
@@ -198,7 +198,6 @@ contrast-ratio($color1, $color2);
 1. `$color1` - First color value.
 2. `$color2` - Second color value.
 
-
 ```scss
 // Outputs the number 21:
 @debug contrast-ratio(white, black);
@@ -242,7 +241,7 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 
 1. `$no-preference` - The default value.
 2. `$more` - High contrast value.
-3. `$less` - Less contrast value.
+3. `$less` - Low contrast value.
 4. `$custom` - None of the above. The client has requested a custom palette by users of `forced-colors: active`.
 
 ```scss
@@ -256,7 +255,7 @@ Each parameter represents an `a11y` function value for the `prefers-contrast` me
 
 Differing levels of color luminance can portray depth and interactivity in a design. Presenting a clear visual hierarchy and signaling to the user that the application is responding to their inputs.
 
-### Shade and Tint and Tone
+### Shade or Tint and Tone
 
 Functions `shade`, `tint` and `tone` modify the HSL lightness attribute of a `$color` by a given `$amount`.
 
@@ -283,7 +282,7 @@ tone($color, $amount);
 
 ### Luminance
 
-Function `luminance` calculates the **relative** luminance of a given `$color` from `0` to `1`.
+Function `luminance` calculates the **relative luminance** of a given `$color` from `0` to `1`.
 
 ```scss
 luminance($color);
@@ -320,7 +319,7 @@ dark($color-list...);
 
 ### Is Light or Dark
 
-Functions `is-light` and `is-dark` return a boolean (**true** or **false**) on whether a color's **relative luminance** is light or dark respectively.
+Functions `is-light` and `is-dark` return a boolean (**true** or **false**) on whether **relative luminance** of `$color` is light or dark respectively.
 
 ```scss
 is-light($color);
