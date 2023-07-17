@@ -1,7 +1,7 @@
-// Tint: Lightens $color by $amount (percentage or weight).
+// Tint: Lightens $color by $amount (percentage).
 
-@use "shade" as *;
+@use "sass:color" as color;
 
 @function tint($color, $amount) {
-	@return shade($color, -$amount);
+	@return color.mix(#FFFFFF, $color, $amount);
 }
