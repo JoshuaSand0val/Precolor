@@ -19,6 +19,7 @@
 		"LICENSE",
 		"README.md"
 	],
+	"type": "module",
 	"main": "scss/_index.scss",
 	"style": "scss/_index.scss",
 	"repository": {
