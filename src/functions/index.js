@@ -2,4 +2,3 @@
 export * from "./a11y.js";
 export * from "./contrastRatio.js";
 export * from "./luminance.js";
-export * from "./precolor.js";
