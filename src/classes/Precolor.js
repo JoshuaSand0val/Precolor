@@ -24,7 +24,7 @@ export class Precolor {
 	// Observe: Adds callback observer to queue.
 	observe(callback) {
 		// Initially run callback:
-		callback();
+		callback(this);
 		// Add callback to observers array:
 		this.observers.push(callback);
 		// Return observer callback:
